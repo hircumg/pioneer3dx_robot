@@ -1,0 +1,6 @@
+
+
+<launch>
+    <include file="$(find pioneer3dx_robot)/launch/single_robot_scenario_norviz_no_gazebo.launch"/>
+    <include file="$(find robot_library)/launch/start_servers.launch"/>
+</launch>
