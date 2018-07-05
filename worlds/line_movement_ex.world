@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
-  <world name="line movement example">
+  <world name="default">
 
     <!-- A global light source -->
     <include>
@@ -8,6 +8,7 @@
     </include>
 
     <!-- A ground plane -->
+
     <include>
       <uri>model://ground_line_field_plane</uri>
     </include>
