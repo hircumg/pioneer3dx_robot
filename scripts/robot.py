@@ -78,14 +78,17 @@ class Robot:
         return self.__get_encoders_client()
 
     def getLaser(self):
-        """:returns laser values, time stamp for current valuses, angle of laser, and angle increment for calculate values"""
+        """:returns laser values, time stamp for current values, angle of laser, 
+        and angle increment for calculate values"""
         _laser = self.__get_laser_client()
         laser = {"time_stamp" : _laser.header.stamp.nsecs, "angle" : (_laser.angle_max * 2),
                  "angle_increment" : _laser.angle_increment, "values" : _laser.ranges}
         return laser
 
     def setVelosities(self, linear_vel, angular_vel):
-        """:return true if succseed"""
+        """This function try to set up linear and angular velosities
+        to the robot in gazebo simulation
+        :return true if succseed"""
         return self.__set_velosities_client(linear_vel, angular_vel)
 
     def getImage(self):
