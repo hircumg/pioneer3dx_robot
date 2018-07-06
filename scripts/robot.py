@@ -3,7 +3,7 @@
 import rospy
 import cv2
 import numpy as np
-from multi_robot_scenario.srv import *
+from robot_library.srv import *
 from sensor_msgs.msg import LaserScan
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError

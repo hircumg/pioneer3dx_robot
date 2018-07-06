@@ -68,7 +68,7 @@ def moveDist(dist, target_dir = robot.getDirection()):
     robot.setVelosities(0, 0)
 
 if __name__ == "__main__":
-    global robot
+    robot = Robot()
 
 
     # just move square 1x1m
