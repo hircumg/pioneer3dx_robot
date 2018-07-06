@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
         # print(img.shape)
 
-        ret, thresh = cv2.threshold(cv2.cvtColor(img, cv2.COLOR_RGB2GRAY), 127, 255, cv2.THRESH_BINARY_INV)
+        ret, thresh = cv2.threshold(cv2.cvtColor(img, cv2.COLOR_RGB2GRAY), 50, 255, cv2.THRESH_BINARY_INV)
 
         # print(thresh.shape)
         # thresh = cv2.cvtColor(thresh, cv2.COLOR_BGR2GRAY)
@@ -80,10 +80,12 @@ if __name__ == "__main__":
         robot.setVelosities(0.6, up)
         print("area= %s, cx = %s, cy = %s, up = %s" % (area, cx, cy, up))
         # cv2.imshow('tresh', thresh)
-        # cv2.imshow('frame', img)
+        # # cv2.imshow('frame', img)
         # cv2.waitKey(0)
         # cv2.destroyAllWindows()
         # rospy.sleep(2)
+        # break
+        
         # dir = robot.getDirection()
         # enc = robot.getEncoders()
         # print("Directon of robot: %s and values of encoders: left: %s, right: %s" % (dir, enc.get("left"), enc.get("right")))

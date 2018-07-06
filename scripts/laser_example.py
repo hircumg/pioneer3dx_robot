@@ -23,8 +23,9 @@ if __name__ == "__main__":
 
 
     threshold = 0.5
-    robot.setVelosities(0.2, 0)
+    robot.setVelosities(0.3, 0)
     while(1):
+        robot.setVelosities(0.3, 0)
         laser = robot.getLaser()
         laser = laser.get('values')[40:len(laser.get('values')) - 40]
         min = 5
