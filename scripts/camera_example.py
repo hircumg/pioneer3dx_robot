@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import sys
-from robot import *
+from robot_library.robot import *
 import cv2
 import rospy
 import numpy as np
