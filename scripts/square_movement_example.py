@@ -46,6 +46,9 @@ def moveDist(dist, target_dir = robot.getDirection()):
     # calculating how many radians to the required position left
     dist_left = (dist / radius_of_the_wheel)
 
+    # save initial number of encoders
+    initial_enc = robot.getEncoders().get("left")
+
     while abs(dist_left) > 0.005:
         # calculating how many radians to the required position left
         enc = robot.getEncoders().get("left")
@@ -72,13 +75,13 @@ if __name__ == "__main__":
 
 
     # just move square 1x1m
-    moveDist(1,turn(90))
+    moveDist(1,turn(1.57))
     robot.sleep(1)
-    moveDist(1,turn(90))
+    moveDist(1,turn(1.57))
     robot.sleep(1)
-    moveDist(1,turn(90))
+    moveDist(1,turn(1.57))
     robot.sleep(1)
-    moveDist(1,turn(90))
+    moveDist(1,turn(1.57))
     robot.sleep(1)
 
     exit(1)
