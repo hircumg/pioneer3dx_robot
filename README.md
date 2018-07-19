@@ -83,4 +83,7 @@ python ~/catkin_ws/src/pioneer3dx_robot/scripts/square_movement_example.py
 
 Как сделать сосбтвенный образ системы описан в [данном](customISO.md) файле.
 
+## Установка на имеющуюся версию Ubuntu
 
+Для того чтобы установить данный проект на собственную версию Ubuntu
+рекомендуется использовать [данную](install.md) инструкцию.
