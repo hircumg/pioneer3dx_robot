@@ -55,7 +55,7 @@ sh ~/catkin_ws/src/pioneer3dx_robot/sh/launch_example.sh
  - камера, с разрешением 800х800 
  - лазер с размахом 4,19 рад.
 
-## Запуск примеров програм
+### Запуск примеров програм
 
 Сейчас имеются несколько примеров работы:
  - Пример работы с камерой. Вывод изображения на экран.
@@ -78,5 +78,9 @@ python ~/catkin_ws/src/pioneer3dx_robot/scripts/laser_example.py
 python ~/catkin_ws/src/pioneer3dx_robot/scripts/square_movement_example.py
 ```
 
+
+## Создание собственного образа системы
+
+Как сделать сосбтвенный образ системы описан в [данном](customISO.md) файле.
 
 
