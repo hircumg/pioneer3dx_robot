@@ -9,6 +9,9 @@
     <!-- Load the URDF into the ROS Parameter Server -->
     <param name="robot_description" command="xacro '$(find pioneer3dx_robot)/xacro/p3dx/pioneer3dx.xacro'" />
 
+    <!-- This delay is to work around the "Spawn status: SpawnModel: Entity pushed to spawn queue, but spawn service timed out waiting for entity to appear in simulation" error -->
+    <arg name="node_start_delay" default="2.0" />
+
     <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
     <node name="urdf_spawner" 
 	pkg="gazebo_ros" 
@@ -16,6 +19,7 @@
 	respawn="false" 
 	output="screen" 
 	args="-urdf -model $(arg robot_name) -param robot_description $(arg robot_position) "
+	launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' "
     />
 
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">

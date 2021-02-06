@@ -3,7 +3,7 @@
 
 
   <!-- Gazebo start -->
-  <arg name="cur_world_name" default="$(find pioneer3dx_robot)/worlds/demonstration_world.world "/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
+  <arg name="cur_world_name" default="$(find pioneer3dx_robot)/worlds/demonstration_world.world"/> <!-- Note: the world_name is with respect to GAZEBO_RESOURCE_PATH environmental variable -->
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
